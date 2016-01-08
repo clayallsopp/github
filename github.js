@@ -971,6 +971,10 @@
                cb(err, res);
             });
          };
+
+         this.getComments = function(issue, cb) {
+           _requestAllPages(issue.comments_url, cb);
+         };
       };
 
       // Search API
